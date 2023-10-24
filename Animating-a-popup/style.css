@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .wrapper{
+  background: lightblue;
+  position : relative;
+  top : -200px;
+  width: 30%;
+    height: 150px;
+   margin: auto;
+    padding : 20px;
+    border-radius : 20px;
+    border-right: 5px solid skyblue;
+    transform-origin : 10px 10px;
+    animation: drop 2s linear both,
+               swing 4s 3s linear;
+  }
+  .close{
+    position : absolute;
+  background : white;
+  display :inline-block;
+    padding: 5px 8px;
+    border-radius : 50%;
+  }
+  .wrapper h2{
+  position : absolute;
+    top: 30%;
+    color: darkcyan
+    
+  }
+  .wrapper input{
+    position: absolute;
+    top: 70%;
+  padding : 10px 15px;
+    width: 80%;
+    border-radius : 10px;
+    border: none;
+    border-right: 5px solid skyblue;
+  }
+  .fa-close{
+    color: darkcyan;
+  }
+  
+  @keyframes drop {
+    0%{
+    transform : translateY(-200px)
+    }
+    100%{
+    transform : translateY(300px)
+    }
+  }
+  @keyframes swing {
+    0%{
+    transform : translateY(300px) rotateZ(0deg)
+    }
+    40%{
+    transform :translateY(300px) rotateZ(90deg)
+    }
+    100%{
+    transform :translateY(300px) rotateZ(70deg)
+    }
+  }
